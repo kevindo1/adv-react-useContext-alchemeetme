@@ -17,11 +17,11 @@ function App() {
       .catch((error) => {
         throw new Error(`Error: ${error}`)
       })
-  }, [])
+  }, [setUser])
 
   return (
-    <Layout>
-      <Home />
+    <Layout user={user}>
+      <Home user={user} />
     </Layout>
   )
 }
